@@ -1,7 +1,7 @@
 // Creative Impact for Children Foundation — shared site behaviour
 (function(){
   // ---- Creative Store link (update this one line to change the URL everywhere) ----
-  var CREATIVE_STORE_URL = 'https://store.creativeimpactbd.com'; // TODO: replace with your live Creative Store URL
+  var CREATIVE_STORE_URL = 'https://creative-store.netlify.app';
   document.querySelectorAll('[data-store-link]').forEach(function(a){ a.href = CREATIVE_STORE_URL; });
 
   // ---- Language switcher ----
