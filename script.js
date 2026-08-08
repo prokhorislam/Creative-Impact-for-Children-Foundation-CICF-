@@ -18,6 +18,20 @@
     b.addEventListener('click', function(){ setLang(b.dataset.lang); });
   });
 
+
+  // ---- Fixed header offset shared across all pages ----
+  var siteHeader = document.querySelector('.site-header');
+  function updateHeaderHeight(){
+    if(!siteHeader) return;
+    document.documentElement.style.setProperty('--header-height', siteHeader.offsetHeight + 'px');
+  }
+  window.addEventListener('DOMContentLoaded', updateHeaderHeight);
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+  if(siteHeader && 'ResizeObserver' in window){
+    new ResizeObserver(updateHeaderHeight).observe(siteHeader);
+  }
+
   // ---- Mobile nav ----
   var menuToggle = document.querySelector('.menu-toggle');
   var mobileNav = document.querySelector('.mobile-nav');
@@ -71,7 +85,7 @@
     });
 
     // Email format (only if filled in)
-    var emailField = form.querySelector('[data-validate="email"]');
+    var emailField = form.querySelector('[data-validate="email"]') || form.querySelector('input[type="email"]');
     if(emailField && emailField.value.trim() && !EMAIL_RE.test(emailField.value.trim())){
       errors.push(fieldError(emailField, 'Please enter a valid email address.', 'অনুগ্রহ করে সঠিক ইমেইল ঠিকানা দিন।'));
     }
@@ -99,7 +113,7 @@
     var submitBtnOriginal = submitBtn ? submitBtn.innerHTML : '';
     var replytoTarget = form.querySelector('[data-replyto-target]');
     var timestampTarget = form.querySelector('[data-timestamp-target]');
-    var emailField = form.querySelector('[data-validate="email"]');
+    var emailField = form.querySelector('[data-validate="email"]') || form.querySelector('input[type="email"]');
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -127,11 +141,13 @@
         return;
       }
 
-      var endpoint = form.dataset.formspreeUrl;
-      if(!endpoint){
-        // No backend configured for this form yet — show confirmation locally
-        form.style.display = 'none';
-        if(successEl) successEl.classList.add('show');
+      var configuredEndpoints = window.CICF_FORM_ENDPOINTS || {};
+      var endpoint = form.dataset.formspreeUrl || configuredEndpoints[form.dataset.formKey];
+      if(!endpoint || /YOUR_.*FORM_ID/.test(endpoint)){
+        showFormError(errorEl,
+          'This form is not connected yet. Please configure the form email endpoint before accepting submissions, or call us directly at 01706027127.',
+          'এই ফর্মটি এখনো সংযুক্ত নয়। সাবমিশন গ্রহণের আগে অনুগ্রহ করে ফর্ম ইমেইল এন্ডপয়েন্ট কনফিগার করুন, অথবা সরাসরি ০১৭০৬০২৭১২৭ নম্বরে কল করুন।'
+        );
         return;
       }
 
@@ -139,9 +155,18 @@
       if(timestampTarget){
         timestampTarget.value = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', dateStyle: 'medium', timeStyle: 'short' }) + ' (Asia/Dhaka)';
       }
+      var subjectField = form.querySelector('input[name="_subject"]');
+      var parentName = form.querySelector('[name="Parent\'s Name"]');
+      var childName = form.querySelector('[name="Child\'s Name"]');
+      var contactName = form.querySelector('[name="Name"]');
+      if(subjectField){
+        var personName = (childName && childName.value.trim()) || (parentName && parentName.value.trim()) || (contactName && contactName.value.trim());
+        if(personName && subjectField.value.indexOf('—') === -1){ subjectField.value = subjectField.value + ' — ' + personName; }
+      }
 
       if(submitBtn){
         submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy','true');
         submitBtn.innerHTML = '<span data-en>Submitting…</span><span data-bn>জমা হচ্ছে...</span>';
       }
 
@@ -169,6 +194,7 @@
       }).finally(function(){
         if(submitBtn){
           submitBtn.disabled = false;
+          submitBtn.removeAttribute('aria-busy');
           submitBtn.innerHTML = submitBtnOriginal;
         }
       });

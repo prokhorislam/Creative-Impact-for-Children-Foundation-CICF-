@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us — Creative Impact for Children Foundation, Adabor, Dhaka | Creative Impact for Children Foundation, Dhaka</title>
 <meta name="description" content="Contact Creative Impact for Children Foundation in Adabor, Dhaka. Call 01706027127, email us, or book an assessment or admission enquiry online.">
-<link rel="icon" href="assets/logo.png">
+<link rel="icon" href="assets/logo/cicf-logo-smooth-vector.svg">
 <meta property="og:title" content="Contact Us — Creative Impact for Children Foundation, Adabor, Dhaka | Creative Impact for Children Foundation">
 <meta property="og:description" content="Contact Creative Impact for Children Foundation in Adabor, Dhaka. Call 01706027127, email us, or book an assessment or admission enquiry online.">
-<meta property="og:image" content="assets/logo.png">
+<meta property="og:image" content="assets/logo/cicf-logo-smooth-vector.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Hind+Siliguri:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -48,8 +48,8 @@
       <a href="assessment.html" class=""><span data-en>Assessment</span><span data-bn>এসেসমেন্ট</span></a>
       <a href="admission.html" class=""><span data-en>Admission</span><span data-bn>ভর্তি</span></a>
       <a href="team.html" class=""><span data-en>Our Team</span><span data-bn>আমাদের টিম</span></a>
-      <a href="activities.html" class=""><span data-en>Activities & Events</span><span data-bn>অনুষ্ঠান ও কার্যক্রম</span></a>
-      <a href="resources.html" class=""><span data-en>Resources & Blog</span><span data-bn>রিসোর্স ও ব্লগ</span></a>
+      <a href="events/" class=""><span data-en>Events</span><span data-bn>ইভেন্টস</span></a>
+      <a href="blogs/" class=""><span data-en>Blogs</span><span data-bn>ব্লগ</span></a>
       <a href="success-stories.html" class=""><span data-en>Success Stories</span><span data-bn>সাফল্যের গল্প</span></a>
       <a href="contact.html" class="active"><span data-en>Contact</span><span data-bn>যোগাযোগ</span></a>
     </nav>
@@ -80,8 +80,8 @@
       <a href="assessment.html">Assessment <span style="opacity:.55;font-weight:500">/ এসেসমেন্ট</span></a>
       <a href="admission.html">Admission <span style="opacity:.55;font-weight:500">/ ভর্তি</span></a>
       <a href="team.html">Our Team <span style="opacity:.55;font-weight:500">/ আমাদের টিম</span></a>
-      <a href="activities.html">Activities <span style="opacity:.55;font-weight:500">/ কার্যক্রম</span></a>
-      <a href="resources.html">Parent Resources <span style="opacity:.55;font-weight:500">/ অভিভাবক সহায়িকা</span></a>
+      <a href="events/">Events <span style="opacity:.55;font-weight:500">/ ইভেন্টস</span></a>
+      <a href="blogs/">Blogs <span style="opacity:.55;font-weight:500">/ ব্লগ</span></a>
       <a href="success-stories.html">Success Stories <span style="opacity:.55;font-weight:500">/ সাফল্যের গল্প</span></a>
       <a href="contact.html">Contact <span style="opacity:.55;font-weight:500">/ যোগাযোগ</span></a>
     <a href="assessment.html" class="btn btn-primary btn-block" style="margin-top:16px">Book an Assessment / এসেসমেন্ট বুক করুন</a>
@@ -139,22 +139,31 @@
       <a href="https://maps.app.goo.gl/uhd9Lr4AQXQfzRTJ9" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-bottom:24px"><span data-en>Open in Google Maps</span><span data-bn>গুগল ম্যাপে দেখুন</span></a>
       <div class="form-card">
         <h3><span data-en>Send Us a Message</span><span data-bn>আমাদের একটি বার্তা পাঠান</span></h3>
-        <form data-cicf-form>
-          <div class="field-row">
-            <div class="field"><label><span data-en>Your Name</span><span data-bn>আপনার নাম</span></label><input type="text" required></div>
-            <div class="field"><label><span data-en>Phone Number</span><span data-bn>ফোন নম্বর</span></label><input type="tel" required></div>
+        <form data-cicf-form data-form-key="contact" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Contact Form Submission – CICF">
+          <input type="hidden" name="_replyto" data-replyto-target>
+          <input type="hidden" name="Submission Date and Time" data-timestamp-target>
+          <input type="hidden" name="Form Name" value="Contact Us Form">
+          <div class="hp-field" aria-hidden="true">
+            <label for="cf_website">Leave this field empty</label>
+            <input type="text" id="cf_website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
-          <div class="field"><label><span data-en>Email Address</span><span data-bn>ইমেইল ঠিকানা</span></label><input type="email"></div>
-          <div class="field"><label><span data-en>I am interested in</span><span data-bn>আমি যা নিয়ে আগ্রহী</span></label>
-            <select>
-              <option><span data-en>General Enquiry</span></option>
+          <div class="field-row">
+            <div class="field"><label for="cf_name"><span data-en>Your Name</span><span data-bn>আপনার নাম</span></label><input type="text" id="cf_name" name="Name" required autocomplete="name"></div>
+            <div class="field"><label for="cf_phone"><span data-en>Phone Number</span><span data-bn>ফোন নম্বর</span></label><input type="tel" id="cf_phone" name="Phone Number" required data-validate="phone" autocomplete="tel" placeholder="01XXXXXXXXX"></div>
+          </div>
+          <div class="field"><label for="cf_email"><span data-en>Email Address</span><span data-bn>ইমেইল ঠিকানা</span></label><input type="email" id="cf_email" name="Email Address" data-validate="email" autocomplete="email"></div>
+          <div class="field"><label for="cf_interest"><span data-en>I am interested in</span><span data-bn>আমি যা নিয়ে আগ্রহী</span></label>
+            <select id="cf_interest" name="Interested In">
+              <option>General Enquiry</option>
               <option>Assessment</option><option>Admission</option><option>Day Care</option><option>Speech Therapy</option><option>Occupational Therapy</option>
             </select>
           </div>
-          <div class="field"><label><span data-en>Message</span><span data-bn>বার্তা</span></label><textarea rows="4" required></textarea></div>
+          <div class="field"><label for="cf_message"><span data-en>Message</span><span data-bn>বার্তা</span></label><textarea id="cf_message" name="Message" rows="4" required></textarea></div>
+          <div class="form-error" role="alert"></div>
           <button type="submit" class="btn btn-primary btn-block"><span data-en>Send Message</span><span data-bn>বার্তা পাঠান</span></button>
         </form>
-        <div class="form-success"><span data-en>Thank you for reaching out. We will get back to you shortly.</span><span data-bn>যোগাযোগ করার জন্য ধন্যবাদ। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</span></div>
+        <div class="form-success"><span data-en>Thank you! Your form has been submitted successfully. We will contact you soon.</span><span data-bn>ধন্যবাদ! আপনার ফর্ম সফলভাবে জমা হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</span></div>
       </div>
     </div>
   </div>
@@ -181,7 +190,7 @@
           <li><a href="services.html"><span data-en>Services</span><span data-bn>সেবাসমূহ</span></a></li>
           <li><a href="assessment.html"><span data-en>Assessment</span><span data-bn>এসেসমেন্ট</span></a></li>
           <li><a href="admission.html"><span data-en>Admission</span><span data-bn>ভর্তি</span></a></li>
-          <li><a href="resources.html"><span data-en>Parent Resources</span><span data-bn>অভিভাবক সহায়িকা</span></a></li>
+          <li><a href="blogs/"><span data-en>Blogs</span><span data-bn>ব্লগ</span></a></li>
           <li><a href="contact.html"><span data-en>Contact</span><span data-bn>যোগাযোগ</span></a></li>
           <li><a data-store-link href="#" target="_blank" rel="noopener" class="footer-store-link">🛍️ <span data-en>Creative Store</span><span data-bn>Creative Store</span></a></li>
         </ul>
@@ -266,7 +275,7 @@
         </span>
         <div>
           <strong><span data-en>CICF Assistant</span><span data-bn>CICF সহায়ক</span></strong>
-          <small><span data-en>Usually replies within a day</span><span data-bn>সাধারণত একদিনের মধ্যে উত্তর দেয়</span></small>
+          <small><span data-en>Demo assistant</span><span data-bn>ডেমো সহায়ক</span></small>
         </div>
       </div>
       <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
@@ -312,6 +321,7 @@
 
 </div>
 
+<script src="forms-config.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
