@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Occupational therapy placeholder">
+  <rect width="1200" height="800" fill="#F4E9DC"/>
+  <circle cx="980" cy="140" r="190" fill="#ffffff" opacity="0.55"/>
+  <circle cx="170" cy="690" r="230" fill="#ffffff" opacity="0.45"/>
+  <path d="M140 530 C300 390 455 455 585 310 C725 155 930 260 1060 120" fill="none" stroke="#7A1738" stroke-width="18" opacity="0.18" stroke-linecap="round"/>
+  <rect x="150" y="185" width="900" height="430" rx="48" fill="#fff" opacity="0.72"/>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#7A1738">Motor Skills</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#665955">Replace with real Creative Developmental School photo</text>
+</svg>

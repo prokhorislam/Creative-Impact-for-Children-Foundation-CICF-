@@ -31,6 +31,12 @@
   if(siteHeader && 'ResizeObserver' in window){
     new ResizeObserver(updateHeaderHeight).observe(siteHeader);
   }
+  function updateHeaderScrollState(){
+    document.body.classList.toggle('home-scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', updateHeaderScrollState, { passive: true });
+  window.addEventListener('load', updateHeaderScrollState);
+  updateHeaderScrollState();
 
   // ---- Mobile nav ----
   var menuToggle = document.querySelector('.menu-toggle');

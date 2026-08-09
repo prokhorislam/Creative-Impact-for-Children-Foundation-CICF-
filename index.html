@@ -32,7 +32,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Hind+Siliguri:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Baloo+2:wght@500;700;800&family=Hind+Siliguri:wght@500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -212,105 +212,82 @@
       </div>
     </div>
     <main id="main">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <span class="eyebrow"
-              ><span data-en
-                >Creative Developmental School, Day Care, Therapy Center &
-                Training Center</span
-              ><span data-bn
-                >ক্রিয়েটিভ ডেভেলপমেন্টাল স্কুল, ডে কেয়ার, থেরাপি সেন্টার ও
-                ট্রেনিং সেন্টার</span
-              ></span
-            >
-            <h1>
-              <span data-en>Learning, Care and Growth</span
-              ><span data-bn>শেখা, যত্ন ও বিকাশ</span>
+      <section class="hero home-hero" aria-labelledby="home-hero-title">
+        <div class="container home-hero-grid">
+          <div class="home-hero-copy">
+            <span class="eyebrow hero-eyebrow">
+              <span data-en>Creative Developmental School • Day Care • Therapy Centre</span>
+              <span data-bn>ক্রিয়েটিভ ডেভেলপমেন্টাল স্কুল • ডে কেয়ার • থেরাপি সেন্টার</span>
+            </span>
+            <h1 id="home-hero-title">
+              <span data-en>Learning, Care &amp; Growth — Together.</span>
+              <span data-bn>শেখা, যত্ন ও বিকাশ — একসাথে।</span>
             </h1>
-            <p class="lede">
-              <span data-en
-                >Creative Impact for Children Foundation provides special
-                education, therapy, pre-schooling and day-care support in a
-                safe, caring and child-friendly environment.</span
-              >
-              <span data-bn
-                >ক্রিয়েটিভ ইমপ্যাক্ট ফর চিলড্রেন ফাউন্ডেশন একটি নিরাপদ, যত্নশীল
-                ও শিশুবান্ধব পরিবেশে বিশেষ শিক্ষা, থেরাপি, প্রি-স্কুলিং এবং
-                ডে-কেয়ার সহায়তা প্রদান করে।</span
-              >
+            <p class="lede hero-lede">
+              <span data-en>Creative Impact for Children Foundation provides special education, therapy, pre-schooling, day care, developmental support and parent guidance in a safe, structured and child-friendly environment.</span>
+              <span data-bn>ক্রিয়েটিভ ইমপ্যাক্ট ফর চিলড্রেন ফাউন্ডেশন নিরাপদ, কাঠামোবদ্ধ ও শিশুবান্ধব পরিবেশে বিশেষ শিক্ষা, থেরাপি, প্রি-স্কুলিং, ডে কেয়ার, বিকাশ সহায়তা ও অভিভাবক দিকনির্দেশনা প্রদান করে।</span>
             </p>
-            <div class="hero-cta">
-              <a href="assessment.html" class="btn btn-primary"
-                ><span data-en>Book an Assessment</span
-                ><span data-bn>এসেসমেন্ট বুক করুন</span></a
-              >
-              <a href="contact.html" class="btn btn-outline"
-                ><span data-en>Contact Us</span
-                ><span data-bn>যোগাযোগ করুন</span></a
-              >
+            <div class="hero-cta hero-actions">
+              <a href="assessment.html" class="btn btn-primary btn-arrow"><span data-en>Book an Assessment</span><span data-bn>এসেসমেন্ট বুক করুন</span><span aria-hidden="true">→</span></a>
+              <a href="services.html" class="btn btn-outline btn-arrow"><span data-en>Explore Our Services</span><span data-bn>সেবাসমূহ দেখুন</span><span aria-hidden="true">→</span></a>
             </div>
-            <div class="hero-badges">
-              <span class="hero-badge"
-                >🛡️ <span data-en>Safe &amp; Inclusive</span
-                ><span data-bn>নিরাপদ ও অন্তর্ভুক্তিমূলক</span></span
-              >
-              <span class="hero-badge"
-                >🎯 <span data-en>Assessment-Led</span
-                ><span data-bn>এসেসমেন্ট-ভিত্তিক</span></span
-              >
-              <span class="hero-badge"
-                >📍 <span data-en>Adabor, Dhaka</span
-                ><span data-bn>আদাবর, ঢাকা</span></span
-              >
+            <a href="contact.html" class="hero-text-link"><span data-en>Visit Our School &amp; Therapy Centre</span><span data-bn>আমাদের স্কুল ও থেরাপি সেন্টার ভিজিট করুন</span></a>
+            <div class="hero-badges hero-trust-tags" aria-label="Key services">
+              <span class="hero-badge">📘 <span data-en>Special Education</span><span data-bn>বিশেষ শিক্ষা</span></span>
+              <span class="hero-badge">🗣️ <span data-en>Therapy</span><span data-bn>থেরাপি</span></span>
+              <span class="hero-badge">🎒 <span data-en>Pre-School</span><span data-bn>প্রি-স্কুল</span></span>
+              <span class="hero-badge">🏡 <span data-en>Day Care</span><span data-bn>ডে কেয়ার</span></span>
+              <span class="hero-badge">👪 <span data-en>Parent Guidance</span><span data-bn>অভিভাবক দিকনির্দেশনা</span></span>
             </div>
           </div>
-          <div class="hero-art">
-            <img
-              src="assets/logo/cicf-logo-smooth-vector.svg"
-              alt="Creative Impact for Children Foundation"
-              style="
-                object-fit: contain;
-                padding: 40px;
-                background: linear-gradient(135deg, #fdf3d9, #e2f2f9);
-              "
-            />
+          <div class="hero-collage" aria-label="Creative Developmental School photo placeholders">
+            <div class="hero-shape hero-shape-blue" aria-hidden="true"></div>
+            <div class="hero-shape hero-shape-maroon" aria-hidden="true"></div>
+            <!-- Replace with real Creative Developmental School photo: teacher or therapist interacting with a child -->
+            <figure class="hero-photo hero-photo-main">
+              <img src="assets/images/hero-main.svg" alt="Teacher or therapist supporting a child during a learning activity" />
+            </figure>
+            <!-- Replace with real Creative Developmental School photo: learning, fine-motor or sensory activity -->
+            <figure class="hero-photo hero-photo-small hero-photo-top">
+              <img src="assets/images/hero-therapy.svg" alt="Child participating in a therapy or sensory activity" />
+            </figure>
+            <!-- Replace with real Creative Developmental School photo: structured teaching or classroom environment -->
+            <figure class="hero-photo hero-photo-small hero-photo-bottom">
+              <img src="assets/images/hero-classroom.svg" alt="Structured classroom or developmental learning environment" />
+            </figure>
+            <div class="hero-floating-card hero-card-one">
+              <span aria-hidden="true">✨</span>
+              <strong><span data-en>Individualised Child Support</span><span data-bn>স্বতন্ত্র শিশুসহায়তা</span></strong>
+            </div>
+            <div class="hero-floating-card hero-card-two">
+              <img src="assets/logo/cicf-logo-smooth-vector.svg" alt="" aria-hidden="true" />
+              <strong><span data-en>School • Therapy • Day Care</span><span data-bn>স্কুল • থেরাপি • ডে কেয়ার</span></strong>
+            </div>
+            <div class="hero-floating-card hero-card-three">
+              <span aria-hidden="true">👪</span>
+              <strong><span data-en>Parent &amp; Family Collaboration</span><span data-bn>অভিভাবক ও পরিবারের সহযোগিতা</span></strong>
+            </div>
           </div>
         </div>
       </section>
-      <svg
-        class="crescent-divider"
-        viewBox="0 0 1200 60"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z"
-          fill="var(--cream)"
-        ></path>
-      </svg>
-      <section class="bg-band section-tight">
-        <div class="container center">
-          <p
-            class="lede"
-            style="max-width: 820px; font-size: 1.15rem; color: var(--ink)"
-          >
-            <span data-en
-              >We believe every child has unique strengths and possibilities.
-              Our trained professionals assess each child's needs and prepare an
-              individualised support plan to help improve communication,
-              learning, behaviour, motor skills, social interaction and daily
-              living abilities.</span
-            >
-            <span data-bn
-              >আমরা বিশ্বাস করি প্রতিটি শিশুর নিজস্ব শক্তি ও সম্ভাবনা রয়েছে।
-              আমাদের প্রশিক্ষিত পেশাদাররা প্রতিটি শিশুর প্রয়োজন যাচাই করে একটি
-              স্বতন্ত্র সহায়তা পরিকল্পনা তৈরি করেন, যা যোগাযোগ, শেখা, আচরণ,
-              মোটর দক্ষতা, সামাজিক মেলামেশা ও দৈনন্দিন জীবনদক্ষতা উন্নয়নে
-              সহায়ক হয়।</span
-            >
-          </p>
+
+      <section class="quick-services" aria-label="Quick service links">
+        <div class="container quick-services-inner">
+          <a href="services.html?service=special-ed" class="quick-service-item">📘 <span data-en>Special Education</span><span data-bn>বিশেষ শিক্ষা</span></a>
+          <a href="services.html?service=speech-language" class="quick-service-item">🗣️ <span data-en>Speech &amp; Language Therapy</span><span data-bn>স্পিচ ও ল্যাঙ্গুয়েজ থেরাপি</span></a>
+          <a href="services.html?service=occupational-therapy" class="quick-service-item">✋ <span data-en>Occupational Therapy</span><span data-bn>অকুপেশনাল থেরাপি</span></a>
+          <a href="services.html?service=behavioural-support" class="quick-service-item">🤝 <span data-en>Behavioural Support</span><span data-bn>আচরণগত সহায়তা</span></a>
+          <a href="services.html?service=ecd-preschool" class="quick-service-item">🎒 <span data-en>Pre-Schooling</span><span data-bn>প্রি-স্কুলিং</span></a>
+          <a href="services.html?service=day-care" class="quick-service-item">🏡 <span data-en>Day Care</span><span data-bn>ডে কেয়ার</span></a>
+        </div>
+      </section>
+
+      <section class="home-trust-mini section-tight">
+        <div class="container home-trust-grid">
+          <div>🎯 <span data-en>Individualised Support</span><span data-bn>স্বতন্ত্র সহায়তা</span></div>
+          <div>🧩 <span data-en>Multidisciplinary Approach</span><span data-bn>বহুমুখী পদ্ধতি</span></div>
+          <div>👪 <span data-en>Family Collaboration</span><span data-bn>পরিবারের সহযোগিতা</span></div>
+          <div>🛡️ <span data-en>Child-Friendly Environment</span><span data-bn>শিশুবান্ধব পরিবেশ</span></div>
         </div>
       </section>
 
@@ -626,6 +603,30 @@
                 ><span data-bn>বিস্তারিত</span></a
               >
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="life-creative">
+        <div class="container">
+          <div class="life-heading">
+            <div>
+              <span class="eyebrow"><span data-en>Learning in Action</span><span data-bn>শেখার মুহূর্ত</span></span>
+              <h2><span data-en>Life at Creative</span><span data-bn>ক্রিয়েটিভের প্রতিদিন</span></h2>
+            </div>
+            <a href="events/" class="btn btn-outline btn-sm btn-arrow"><span data-en>View More Activities</span><span data-bn>আরও কার্যক্রম দেখুন</span><span aria-hidden="true">→</span></a>
+          </div>
+          <div class="life-photo-grid">
+            <!-- Replace with real Creative Developmental School classroom photo -->
+            <figure class="image-card image-card-large"><img src="assets/images/life-classroom.svg" alt="Classroom activities at Creative Developmental School" /><figcaption><span data-en>Classroom Activities</span><span data-bn>ক্লাসরুম কার্যক্রম</span></figcaption></figure>
+            <!-- Replace with real speech therapy photo -->
+            <figure class="image-card"><img src="assets/images/life-speech.svg" alt="Speech therapy activity" /><figcaption><span data-en>Speech Therapy</span><span data-bn>স্পিচ থেরাপি</span></figcaption></figure>
+            <!-- Replace with real occupational therapy photo -->
+            <figure class="image-card"><img src="assets/images/life-ot.svg" alt="Occupational therapy and motor skill activity" /><figcaption><span data-en>Motor Skills</span><span data-bn>মোটর দক্ষতা</span></figcaption></figure>
+            <!-- Replace with real art or sensory activity photo -->
+            <figure class="image-card"><img src="assets/images/life-art.svg" alt="Art and sensory activity" /><figcaption><span data-en>Art &amp; Sensory Play</span><span data-bn>শিল্প ও সেন্সরি খেলা</span></figcaption></figure>
+            <!-- Replace with real group learning photo -->
+            <figure class="image-card image-card-wide"><img src="assets/images/life-group.svg" alt="Group learning and social activity" /><figcaption><span data-en>Group Learning</span><span data-bn>দলগত শিক্ষা</span></figcaption></figure>
           </div>
         </div>
       </section>
