@@ -75,3 +75,49 @@ body.home-scrolled .site-header{box-shadow:0 18px 44px -34px rgba(74,16,36,.58);
 @media (max-width:1120px){.home-hero{min-height:auto;background:linear-gradient(180deg,#FFF9F2 0%,#FFF9F2 52%,#EAF4F4 52%,#EAF4F4 100%)}.home-hero-grid{grid-template-columns:1fr}.hero-collage{min-height:520px;max-width:720px;margin:auto}.home-trust-grid{grid-template-columns:repeat(2,1fr)}.life-photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:190px}.image-card-large,.image-card-wide{grid-column:auto;grid-row:auto}}
 @media (max-width:640px){.home-hero{padding:34px 0 44px}.home-hero h1{font-size:clamp(2.25rem,11vw,3.45rem)}.hero-actions .btn{width:100%}.hero-collage{min-height:430px}.hero-photo{border-width:6px}.hero-photo-main{left:0;top:0;width:78%;height:68%;border-radius:28px}.hero-photo-top{right:0;top:12%;width:42%;height:27%;border-radius:24px 24px 24px 54px}.hero-photo-bottom{right:4%;bottom:12%;width:58%;height:30%;border-radius:54px 22px 22px 22px}.hero-floating-card{font-size:.78rem;padding:10px 12px;max-width:190px}.hero-card-one{left:2%;top:68%}.hero-card-two{display:none}.hero-card-three{right:0;left:auto;bottom:0}.home-trust-grid{grid-template-columns:1fr}.life-heading{display:block}.life-heading .btn{margin-top:14px}.life-photo-grid{grid-template-columns:1fr;grid-auto-rows:210px}.quick-services-inner{width:100%;padding-inline:14px}.quick-service-item{min-width:220px}}
 @media (prefers-reduced-motion:reduce){.home-hero-copy,.hero-collage,.hero-floating-card{animation:none!important}.hero-photo img,.image-card img,.quick-service-item,.btn-arrow span[aria-hidden="true"]{transition:none!important}}
+
+/* CICF six-wing ecosystem section */
+.cicf-wings{
+  --wings-maroon:#70152F;
+  --wings-primary:#7A1738;
+  --wings-burgundy:#4A1024;
+  --wings-ivory:#FFFDFC;
+  --wings-line:rgba(122,23,56,.14);
+  --wings-soft:#EAF4F4;
+  position:relative;
+  overflow:hidden;
+  padding:clamp(54px,7vw,94px) 0;
+  background:radial-gradient(circle at 88% 10%,rgba(234,244,244,.95),transparent 32%),linear-gradient(135deg,#FFF9F2 0%,#fff 54%,#F1E7DC 100%);
+}
+.cicf-wings::before{content:"";position:absolute;left:-100px;top:18%;width:270px;height:270px;border:42px solid rgba(122,23,56,.08);border-radius:50%}
+.cicf-wings-inner{position:relative;z-index:1}
+.wings-intro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(300px,.7fr);gap:28px;align-items:end;margin-bottom:30px}
+.wings-intro-centered{display:block;text-align:center;max-width:880px;margin:0 auto 36px}
+.wings-intro h2{font-family:"Manrope","Hind Siliguri",sans-serif;font-size:clamp(2rem,4vw,4.2rem);line-height:1;letter-spacing:-.055em;color:#4A1024;margin:0}
+.wings-subtitle{max-width:760px;margin:18px auto 0;color:#5f5551;font-size:clamp(.98rem,1.35vw,1.12rem);line-height:1.72}
+.wings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:20px;align-items:stretch}
+.cicf-wings .wing-card{position:relative;display:grid;grid-template-rows:190px minmax(0,1fr);height:100%;min-height:468px;overflow:hidden;border-radius:24px;background:var(--wings-ivory);border:1px solid var(--wings-line);box-shadow:0 8px 30px rgba(74,16,36,.06);color:#252525;text-decoration:none;isolation:isolate;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background-color .22s ease,color .22s ease}
+.cicf-wings .wing-card:hover,.cicf-wings .wing-card:focus-visible{transform:translateY(-6px);background:var(--wings-maroon);border-color:transparent;box-shadow:0 18px 45px rgba(74,16,36,.18);color:#fff}
+.cicf-wings .wing-card:focus-visible{outline:3px solid rgba(122,23,56,.34);outline-offset:5px}
+.cicf-wings .wing-card:active{transform:translateY(-2px)}
+.cicf-wings .wing-card figure{position:relative;margin:0;min-height:190px;overflow:hidden;background:linear-gradient(135deg,rgba(234,244,244,.92),rgba(255,249,242,.96));border-bottom:1px solid rgba(122,23,56,.08)}
+.cicf-wings .wing-card figure::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 24% 28%,rgba(122,23,56,.16),transparent 28%),radial-gradient(circle at 76% 18%,rgba(234,244,244,.95),transparent 32%),linear-gradient(135deg,rgba(255,255,255,.14),rgba(122,23,56,.08));z-index:0}
+.cicf-wings .wing-card figure::after{content:"";position:absolute;right:18px;bottom:16px;width:72px;height:72px;border:14px solid rgba(255,255,255,.45);border-radius:50%;z-index:0}
+.cicf-wings .wing-card img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;transition:transform .44s ease,filter .22s ease}
+.cicf-wings .wing-card:hover img,.cicf-wings .wing-card:focus-visible img{transform:scale(1.03);filter:saturate(1.04) contrast(1.02)}
+.wing-number{position:absolute;top:14px;right:14px;z-index:3;display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:32px;padding:0 10px;font-family:"Manrope",sans-serif;font-weight:900;font-size:.76rem;letter-spacing:.12em;color:#7A1738;background:rgba(255,255,255,.9);border:1px solid rgba(122,23,56,.12);border-radius:999px;box-shadow:0 10px 26px -20px rgba(74,16,36,.55);transition:color .22s ease,background-color .22s ease,border-color .22s ease}
+.wing-content{padding:22px;display:flex;flex-direction:column;min-height:0}
+.wing-icon{width:44px;height:44px;flex:0 0 auto;border-radius:15px;display:grid;place-items:center;background:#EAF4F4;color:#7A1738;margin-bottom:16px;border:1px solid rgba(122,23,56,.08);transition:color .22s ease,background-color .22s ease,border-color .22s ease}
+.wing-icon svg{width:23px;height:23px;display:block}
+.wing-content h3{font-family:"Manrope","Hind Siliguri",sans-serif;font-size:clamp(1.05rem,1.34vw,1.34rem);line-height:1.15;letter-spacing:-.025em;color:#4A1024;margin:0 0 10px;text-wrap:balance;transition:color .22s ease}
+.wing-content p{font-size:.92rem;color:#665955;line-height:1.58;margin:0;flex:1;transition:color .22s ease}
+.wing-card-cta{display:inline-flex;align-items:center;gap:7px;margin-top:18px;color:#7A1738;font-family:"Manrope","Hind Siliguri",sans-serif;font-size:.88rem;font-weight:900;line-height:1.2;transition:color .22s ease}
+.wing-card-cta .wing-arrow{display:inline-block;transition:transform .18s ease}
+.cicf-wings .wing-card:hover .wing-number,.cicf-wings .wing-card:focus-visible .wing-number{color:#fff;background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.22)}
+.cicf-wings .wing-card:hover .wing-icon,.cicf-wings .wing-card:focus-visible .wing-icon{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.18);color:#fff}
+.cicf-wings .wing-card:hover h3,.cicf-wings .wing-card:focus-visible h3,.cicf-wings .wing-card:hover p,.cicf-wings .wing-card:focus-visible p,.cicf-wings .wing-card:hover .wing-card-cta,.cicf-wings .wing-card:focus-visible .wing-card-cta{color:#fff}
+.cicf-wings .wing-card:hover p,.cicf-wings .wing-card:focus-visible p{opacity:.9}
+.cicf-wings .wing-card:hover .wing-card-cta .wing-arrow,.cicf-wings .wing-card:focus-visible .wing-card-cta .wing-arrow{transform:translateX(4px)}
+@media (max-width:1040px){.wings-intro{grid-template-columns:1fr}.wings-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.cicf-wings .wing-card{min-height:448px}}
+@media (max-width:620px){.cicf-wings{padding:42px 0}.wings-intro-centered{margin-bottom:28px}.wings-intro h2{font-size:clamp(2rem,10vw,3rem)}.wings-subtitle{font-size:.96rem;line-height:1.65}.wings-grid{grid-template-columns:1fr;gap:16px}.cicf-wings .wing-card{grid-template-rows:165px minmax(0,1fr);min-height:auto;border-radius:22px}.cicf-wings .wing-card figure{min-height:165px}.wing-content{padding:20px}.wing-card-cta{margin-top:16px}}
+@media (prefers-reduced-motion:reduce){.cicf-wings .wing-card,.cicf-wings .wing-card img,.wing-number,.wing-icon,.wing-content h3,.wing-content p,.wing-card-cta,.wing-card-cta .wing-arrow{transition:none!important}.cicf-wings .wing-card:hover,.cicf-wings .wing-card:focus-visible,.cicf-wings .wing-card:active{transform:none}.cicf-wings .wing-card:hover img,.cicf-wings .wing-card:focus-visible img{transform:none}}
